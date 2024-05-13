@@ -34,6 +34,7 @@ class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
     override fun getItemCount(): Int {
             return movies.size
+
     }
 
     inner class MovieViewHolder(private var bindingItem: ItemMovieBinding)
@@ -43,6 +44,8 @@ class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
                      bindingItem.movieTitle.text = title
                      bindingItem.movieYear.text = year.toString()
                      bindingItem.movieRating.rating = rating.toFloat()
+                     bindingItem.movieGenre.text = genre
+                     bindingItem.movieDirector.text = director
                  }
 
                  bindingItem.root.setOnClickListener {
